@@ -4,14 +4,13 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/sk7434/Devops-Project1.git'
+                git branch: 'main', url: 'https://github.com/sk7434/Devops-Project1.git'
             }
         }
 
         stage('Build') {
             steps {
-                sh 'echo "Building application..."'
-                // For HTML only, no actual build is needed
+                sh 'echo "No build needed for HTML. Continuing..."'
             }
         }
 
